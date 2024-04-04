@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boa Sorte!</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: gagalin;
+        /* position: absolute; */
+        border: none;
+      }
+      @font-face {
+        font-family: gagalin;
+        src: url("./assets/fonts/Gagalin-Regular.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 213, 239);
+      }
+      h1 {
+        font-size: 10rem;
+        margin-bottom: 0.5rem;
+        color: rgb(126, 0, 105);
+      }
+      p {
+        font-size: 3.2rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        color: rgb(126, 0, 105);
+      }
+      button {
+        font-size: 7rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(219, 137, 185);
+        color: rgb(126, 0, 105);
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(238, 147, 200);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Boa Sorte!</h1>
+    <p>Muito obrigado por participar.</p>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+  </body>
+</html>

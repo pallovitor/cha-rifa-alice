@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chá rifa da Alice</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div>
+  <div  class="spinning-circles">
+    <label class="container-checkboxes "><input
+        type="radio"
+        name="toggle"
+        value="pix"
+        class="pix-check"
+        id="pix-check"
+        
+      />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container-checkboxes ">
+      <input
+        type="radio"
+        value="fralda"
+        name="toggle"
+        class="fraldas-check"
+        id="fraldas-check"
+        
+        
+      />
+      <span class="checkmark"></span>
+    </label>
+    </div>
+  
+  <div class="mascara-formulario" onclick="cliqueimascara()"></div>
+  <form id="ticket-form" class="ticket-form-send"
+  action="https://formcarry.com/s/6ZkYI-7HdF6" method="POST" >
+    <legend class="legend">Preencha seus dados</legend>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required placeholder="Digite seu nome aqui!"></input>
+    <label for="tel">whatsapp:</label>
+    <input type="tel" id="tel" name="tel" required placeholder="(xx) xxxx-xxxx"></input>
+    <textarea name="dados" id="dados" cols="30" rows="10" class="number-selects">
+      
+    </textarea>
+    <button id="submit-btn" class="send">Enviar</button>
+  </form>
+
+  </div>
+  
+  
+  <div class="container-background">
+    <div class="container">
+      <div class="number">
+      <div id="number-container" className="number-container" class="number-container"></div>
+    </div>
+    </div>
+    <img src="./assets/Alice.png" alt="Imagem de Alice" />
+    <p id="valor">R$</p>
+  <button data-js="showForm" class="big-button">Enviar</button>
+    <!-- <video src="./assets/Alice.mp4" autoplay muted loop></video> -->
+    <p class="fraldas">?</p>
+    
+  </div>
+  
+  
+</div>
+
+</body>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = 
+
+  // Initialize Firebase
+  firebase.initializeApp({
+    apiKey: "AIzaSyC2b9ODJXriEJYkR4audr611PlYFXZuFKE",
+    authDomain: "cha-rifa-da-alice.firebaseapp.com",
+    projectId: "cha-rifa-da-alice",
+    storageBucket: "cha-rifa-da-alice.appspot.com",
+    messagingSenderId: "1005804935672",
+    appId: "1:1005804935672:web:dbb172394743cfe6649e0d"
+  })
+
+
+</script>
+ -->
+
+<script type="module" src="./app.js"></script>
+
+</html>
