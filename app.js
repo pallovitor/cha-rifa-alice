@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"
 import { getFirestore, collection, getDocs, addDoc, doc, updateDoc, arrayUnion, increment } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"
 
@@ -17,6 +16,7 @@ const showForm = document.querySelector(".big-button")
 
 let firebaseData;
 
+
 const querySnapshot = await getDocs(collection(db, "rifa"));
 querySnapshot.forEach((doc) => {
 
@@ -29,6 +29,7 @@ querySnapshot.forEach((doc) => {
 
 
 console.log(firebaseData);
+
 
 const numberContainer = document.getElementById("number-container");
 const submitBtn = document.getElementById("submit-btn");
@@ -46,7 +47,12 @@ let totalValue = 0;
 let backumbers = firebaseData
 var t = ""
 let cont = 0
-let numberSelector
+var numberSelector
+
+
+
+
+
 
 
 function esconde() {
@@ -55,9 +61,20 @@ function esconde() {
 
 }
 
+// const whtss = document.getElementById("whats")
+
+// whtss.onclick = () => {
+
+//     window.open('https://api.whatsapp.com/send?phone=')
+
+// }
+
+
+
 
 
 (async () => {
+
 
 
     function generateNumberBoxes() {
@@ -187,6 +204,7 @@ function esconde() {
         form.style.left = "-300px"
         form.style.transform = "translateX(0)"
         mascara.style.visibility = "hidden"
+        window.location.reload()
     }
 
 
@@ -239,6 +257,7 @@ function esconde() {
         console.log(selectedNumbers)
         submitForm();
 
+
     }
 
     async function submitForm() {
@@ -246,16 +265,31 @@ function esconde() {
         const nameInput = document.getElementById("name");
         const telInput = document.getElementById("tel");
         formData.append("selectedNumbers", selectedNumbers);
-        const response = await fetch("https://formcarry.com/s/6ZkYI-7HdF6", {
+        const response = await fetch("https://formcarry.com/s/IJgtvwpg3ly", {
             method: "POST",
             body: formData,
             enctype: "multipart/form-data",
 
         });
-        window.location.href = './thanks.html';
+        if (pix.checked && selectedNumbers.length > 1) {
+            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=*%23Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*PIX%3A*%20${totalValue}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI OS NÚMEROS:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
+
+
+        } else if (pix.checked && selectedNumbers.length === 1) {
+            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=*%23Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*PIX%3A*%20${totalValue}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI O NÚMERO:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
+        } else if (fraldas.checked && selectedNumbers.length === 1) {
+
+            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=**Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*Fralda*%20${t}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI O NÚMERO:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
+
+        } else {
+            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=**Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*Fralda*%20${t}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI OS NÚMEROS:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
+
+        }
 
 
     }
+
+
 
 
 
@@ -266,4 +300,10 @@ function esconde() {
     submitBtn.addEventListener("click", submitTicket);
 
 
+
+
+
 })();
+
+
+
