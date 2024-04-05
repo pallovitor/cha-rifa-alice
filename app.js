@@ -279,10 +279,10 @@ function esconde() {
             window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=*%23Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*PIX%3A*%20${totalValue}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI O NÚMERO:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
         } else if (fraldas.checked && selectedNumbers.length === 1) {
 
-            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=**Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*Fralda*%20${t}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI O NÚMERO:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
+            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=**Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*Fralda%3A*%20${t}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI O NÚMERO:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
 
         } else {
-            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=**Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*Fralda*%20${t}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI OS NÚMEROS:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
+            window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=**Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*Fralda%3A*%20${t}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI OS NÚMEROS:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
 
         }
 
