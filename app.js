@@ -211,7 +211,7 @@ function esconde() {
 
 
     async function submitTicket() {
-        handleSubmit()
+
 
 
 
@@ -223,6 +223,7 @@ function esconde() {
             alert("Por favor, preencha todos os campos do formulário.");
             return;
         }
+        handleSubmit()
 
 
 
