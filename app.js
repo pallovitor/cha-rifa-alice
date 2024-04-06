@@ -62,6 +62,7 @@ function esconde() {
                 } else {
                     const index = selectedNumbers.indexOf(i);
                     selectedNumbers.splice(index, 1);
+                    cont--
                     totalValue = 35 * selectedNumbers.length
                     numberSelector = selectedNumbers[cont - 1]
                     valor.innerHTML = totalValue
