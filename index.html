@@ -37,16 +37,19 @@
   
   <div class="mascara-formulario" onclick="cliqueimascara()"></div>
   <form id="ticket-form" class="ticket-form-send"
-  action="https://formcarry.com/s/6ZkYI-7HdF6" method="POST" >
+  action="https://script.google.com/macros/s/AKfycbxG9oWvfJn7MsaxRMMVipqOPpvZukZMVriku8I0spKQeZGA-JEmCvw9_xwuCO1awpgWxQ/exec?gid=490905143"
+    method="post">
     <legend class="legend">Preencha seus dados</legend>
-    <label for="name">Nome:</label>
-    <input type="text" id="name" name="name" required placeholder="Digite seu nome aqui!"></input>
+    <label for="name" >Nome:</label>
+    <input type="text" id="name" name="Nome:" required placeholder="Digite seu nome aqui!"></input>
     <label for="tel">whatsapp:</label>
-    <input type="tel" id="tel" name="tel" required placeholder="(xx) xxxx-xxxx"></input>
+    <input type="tel" id="tel" name="numer" required placeholder="(xx) xxxx-xxxx"></input>
+    <input type="number" name="Numero:" hidden id="selectedNumbers"/>
+    <input type="text" name="Forma:" hidden id="forma" value="">
     <textarea name="dados" id="dados" cols="30" rows="10" class="number-selects">
       
     </textarea>
-    <button id="submit-btn" class="send" href="/thanks.html">Enviar</button>
+    <button id="submit-btn" class="send">Enviar</button>
   </form>
 
   </div>

@@ -1,3 +1,4 @@
+// IMPORTANDO  MODULOS
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"
 import { getFirestore, collection, getDocs, addDoc, doc, updateDoc, arrayUnion, increment } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"
 
@@ -12,24 +13,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
-const showForm = document.querySelector(".big-button")
 
 let firebaseData;
 
-
 const querySnapshot = await getDocs(collection(db, "rifa"));
 querySnapshot.forEach((doc) => {
-
-
-
     firebaseData = doc.data().backuNbers;
+
 });
-
-
-
-
 console.log(firebaseData);
-
 
 const numberContainer = document.getElementById("number-container");
 const submitBtn = document.getElementById("submit-btn");
@@ -37,10 +29,8 @@ const form = document.querySelector(".ticket-form-send")
 const valor = document.getElementById("valor");
 const mascara = document.querySelector(".mascara-formulario")
 const tFralda = document.querySelector(".fraldas");
-// fazet o document.getElementById("fralda-check") ja começar selecionado 
 let fraldas = document.querySelector('#fraldas-check')
 let pix = document.querySelector('#pix-check')
-
 
 let selectedNumbers = [];
 let totalValue = 0;
@@ -49,34 +39,12 @@ var t = ""
 let cont = 0
 var numberSelector
 
-
-
-
-
-
-
 function esconde() {
     mascara.style = "z-index: 3"
     mascara.style.visibility = "visible"
-
 }
 
-// const whtss = document.getElementById("whats")
-
-// whtss.onclick = () => {
-
-//     window.open('https://api.whatsapp.com/send?phone=')
-
-// }
-
-
-
-
-
 (async () => {
-
-
-
     function generateNumberBoxes() {
         for (let i = 1; i <= 80; i++) {
             const numberBox = document.createElement("div");
@@ -101,10 +69,6 @@ function esconde() {
 
                 submitBtn.disabled = selectedNumbers.length < 1;
 
-
-                // enquanto o numberBox.textContent for menor 10 tFralda.innerHTML recebe "P"  e vice versa
-
-
                 console.log(numberSelector)
 
                 if (numberSelector === undefined) {
@@ -122,15 +86,9 @@ function esconde() {
                     t = "G"
                     tFralda.innerHTML = "G"
                 }
-
-
             });
 
             if (backumbers.includes(i)) {
-                // let span = document.createElement('span')
-                // span.setAttribute('style', 'color:pink');
-                // span.appendChild(document.createTextNode("❤"));
-                // numberBox.appendChild(span);
                 numberBox.setAttribute('onclick', 'return false');
                 numberBox.style.pointerEvents = 'none';
                 // numberBox.removeChild(numberBox.firstChild)
@@ -138,36 +96,23 @@ function esconde() {
                 numberBox.style.background = `url("./assets/pé.png")`
                 numberBox.style.color = "#ffffff00";
                 numberBox.style.backgroundSize = "cover"
-
-                // selectedNumbers.push(i);
-
             }
-
-
             numberContainer.appendChild(numberBox);
-
-
-
-
         }
-
     }
 
-
-
-
-
-
-
     function showForm() {
-
+        const number = document.getElementById("selectedNumbers");
+        const forma = document.getElementById("forma")
+        number.value = selectedNumbers
+        pix.checked ? forma.value = "PIX" : forma.value = "FRALDA"
+        console.log(forma.value)
 
         const messageTextArea = document.getElementById("dados");
         if (selectedNumbers.length === 0) {
             alert("Por favor, escolha pelo menos um numero!")
         } else if ((!pix.checked && !fraldas.checked)) {
             alert("Por favor escolha entre  PIX ou Fralda!");
-
 
         } else if (pix.checked && selectedNumbers.length > 1) {
             form.style.left = "50%"
@@ -192,10 +137,7 @@ function esconde() {
             mascara.style.visibility = "visible"
             messageTextArea.innerHTML = `Muito obrigado por participar!\nSeus números são: ${selectedNumbers}.\nPor tanto o tamanho da fralda é: "${t}."\nNos e a Alice desejamos boa sorte!`
 
-
         }
-
-
 
     }
 
@@ -207,27 +149,15 @@ function esconde() {
         window.location.reload()
     }
 
-
-
-
     async function submitTicket() {
-
-
-
-
         const nameInput = document.getElementById("name");
         const emailInput = document.getElementById("tel");
-
 
         if (nameInput.value === "" || emailInput.value === "") {
             alert("Por favor, preencha todos os campos do formulário.");
             return;
         }
         handleSubmit()
-
-
-
-
         // Process the form data here
         console.log("Name: " + nameInput.value);
         console.log("Tel: " + emailInput.value);
@@ -240,10 +170,7 @@ function esconde() {
     const form = document.querySelector(".ticket-form-send");
 
     form.addEventListener("submit", (event) => {
-
-
         event.preventDefault();
-
     });
     async function handleSubmit() {
         esconde()
@@ -258,20 +185,10 @@ function esconde() {
         console.log(selectedNumbers)
         submitForm();
 
-
     }
 
     async function submitForm() {
-        const formData = new FormData(form);
-        const nameInput = document.getElementById("name");
-        const telInput = document.getElementById("tel");
-        formData.append("selectedNumbers", selectedNumbers);
-        const response = await fetch("https://formcarry.com/s/IJgtvwpg3ly", {
-            method: "POST",
-            body: formData,
-            enctype: "multipart/form-data",
-
-        });
+        const nameInput = document.getElementById("name")
         if (pix.checked && selectedNumbers.length > 1) {
             window.location.href = `https://api.whatsapp.com/send?phone=5511948798047&text=*%23Ch%C3%A1%20rifa%20da%20Alice*%0A*Nome%20%3A*%20${nameInput.value}%0A*PIX%3A*%20${totalValue}%0A*_OLÁ, QUERO PARTICIPAR DA RIFA DESSA PRINCESA, E EU ESCOLHI OS NÚMEROS:_* ${selectedNumbers}%0A🥰🤞🙌%0A`;
 
@@ -287,24 +204,28 @@ function esconde() {
 
         }
 
-
     }
 
+    document.getElementById('ticket-form').addEventListener('submit', function (event) {
 
+        event.preventDefault();
+        var formData = new FormData(this);
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
 
+                console.log(data);
+            })
+            .catch(error => {
 
-
-
+                console.error(error);
+            });
+    });
     document.querySelector('.big-button').addEventListener('click', showForm);
     document.querySelector('.mascara-formulario').addEventListener('click', cliqueimascara);
     generateNumberBoxes();
     submitBtn.addEventListener("click", submitTicket);
-
-
-
-
-
 })();
-
-
-
