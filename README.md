@@ -1,19 +1,34 @@
 <h1>Chá rifada Alice</h1>
 <h2>Introdução</h2>
-<p>Este é um aplicativo de rifa virtual para o chá de bebê da Alice (Minha Filha que esta preste a nascer). O aplicativo
-    permite que os usuários selecionem números de rifa e enviem suas informações de contato para participar do sorteio.
+<p>
+    Este é um aplicativo de rifa virtual para o chá de bebê da Alice (Minha Filha
+    que esta preste a nascer). O aplicativo permite que os usuários selecionem
+    números de rifa e enviem suas informações de contato para participar do
+    sorteio.
 </p>
-<p>Após selecionar os números, PIX ou fralda e preencher o formulário com nome e número de telefone, o usuário é
-    redirecionado para o chat do WhatsApp, onde suas informações de nome, números e tipo de pagamento (fralda ou PIX)
-    são enviadas.</p>
-<p>Logo após, uma mensagem automática é enviada no WhatsApp do usuário conforme o que ele optou. Por exemplo, se o
-    usuário optou por 1 número e PIX, ele receberá uma mensagem de agradecimento e uma chave PIX já com um valor setado
-    para ele apenas copiar e colar. Caso a quantidade de números seja maior que 1, a chave PIX também sofre alteração
-    para o valor correto.</p>
-<p>A aplicação também envia o nome, número e tipo (PIX ou Fralda) para uma planilha do Google Sheets, para facilitar a
-    localização do sorteado na hora do sorteio.</p>
-<p>Todos os números escolhidos vão para um banco de dados no Firebase, e logo após os números são recarregados na página
-    como já selecionados, para que os outros usuários não escolham os mesmos números.</p>
+<p>
+    Após selecionar os números, PIX ou fralda e preencher o formulário com nome e
+    número de telefone, o usuário é redirecionado para o chat do WhatsApp, onde
+    suas informações de nome, números e tipo de pagamento (fralda ou PIX) são
+    enviadas.
+</p>
+<p>
+    Logo após, uma mensagem automática é enviada no WhatsApp do usuário conforme o
+    que ele optou. Por exemplo, se o usuário optou por 1 número e PIX, ele
+    receberá uma mensagem de agradecimento e uma chave PIX já com um valor setado
+    para ele apenas copiar e colar. Caso a quantidade de números seja maior que 1,
+    a chave PIX também sofre alteração para o valor correto.
+</p>
+<p>
+    A aplicação também envia o nome, número e tipo (PIX ou Fralda) para uma
+    planilha do Google Sheets, para facilitar a localização do sorteado na hora do
+    sorteio.
+</p>
+<p>
+    Todos os números escolhidos vão para um banco de dados no Firebase, e logo
+    após os números são recarregados na página como já selecionados, para que os
+    outros usuários não escolham os mesmos números.
+</p>
 <h2>Funcionalidades</h2>
 <ul>
     <li>Seleção de números de rifa</li>
@@ -26,9 +41,15 @@
 <h2>Como usar</h2>
 <ol>
     <li>Abra o aplicativo em seu navegador.</li>
-    <li>Selecione os números de rifa desejados clicando neles. Os números selecionados serão destacados com um coração.</li>
+    <li>
+        Selecione os números de rifa desejados clicando neles. Os números
+        selecionados serão destacados com um coração.
+    </li>
     <li>Preencha o formulário com suas informações de contato.</li>
-    <li>Clique no botão "Enviar" para enviar suas informações via WhatsApp e participar do sorteio.</li>
+    <li>
+        Clique no botão "Enviar" para enviar suas informações via WhatsApp e
+        participar do sorteio.
+    </li>
     <li>Uma mensagem de confirmação será enviada para você via WhatsApp.</li>
     <li>Clique no Link que você receber (caso tenha optado pelo PIX)</li>
     <li>Copie a chave PIX do tipo “COPIE E COLE” ou escanei o QR-CODE</li>
@@ -44,14 +65,19 @@
     <li>Google Sheets Webhooks for Sheets API</li>
 </ul>
 <h2>Site da aplicação</h2>
-<a href="https://pallovitor.github.io/cha-rifa-alice/">Chá Rifa</a>
 <h4>Observação:</h4>
-<h5>O site está funcionando atualmente apenas em dispositivos moveis.</h5>
+<h6>O site está funcionando atualmente apenas em dispositivos moveis.</h6>
+<a href="https://pallovitor.github.io/cha-rifa-alice/" style="text-decoration:none;">Chá Rifa</a>
 <h2>Contato</h2>
 <p>Para mais informações, entre em contato com o desenvolvedor:</p>
 <ul>
-    <li>Nome: Paulo-Vitor
+    <li>Nome: Paulo Vitor</li>
+    <li>
+        E-mail: pvitor.asilva@gmail.com<a href="mailto:pvitor.asilva@gmail.com" style="text-decoration:none;"><img
+                src="./assets/gmail.webp" alt="gmail-logo"
+                style="height: 15px; width: 15; position: absolute; margin: 2px 0 0 6px; "></a>
     </li>
-    <li>E-mail: pallo.vittor@gmail.com</li>
-    <li>Telefone: (11) 94879-8047</li>
+    <li>Telefone: (11) 94879-8047 <a href="https://api.whatsapp.com/send?phone=5511948798047&text=Olá! Paulo tudo bem?"
+            target="_blank" style="text-decoration:none; "> <img src="./assets/whatsApp.png" alt="logo-whatsapp"
+                style="height: 15px; width: 15; position: absolute; margin: 2px 0 0 6px;" /></a></li>
 </ul>
