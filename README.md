@@ -50,7 +50,7 @@
 <h2>Contato</h2>
 <p>Para mais informações, entre em contato com o desenvolvedor:</p>
 <ul>
-    <li>Nome: <Paulo-Vitor>
+    <li>Nome: Paulo-Vitor
     </li>
     <li>E-mail: pallo.vittor@gmail.com</li>
     <li>Telefone: (11) 94879-8047</li>
