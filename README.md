@@ -44,9 +44,9 @@
     <li>Google Sheets Webhooks for Sheets API</li>
 </ul>
 <h2>Site da aplicação</h2>
+<a href="https://pallovitor.github.io/cha-rifa-alice/">Chá Rifa</a>
 <h4>Observação:</h4>
-<h6>O site está funcionando atualmente apenas em dispositivos moveis.</h6>
-<a href=" https://pallovitor.github.io/cha-rifa-alice/"> https://pallovitor.github.io/cha-rifa-alice/</a>
+<h5>O site está funcionando atualmente apenas em dispositivos moveis.</h5>
 <h2>Contato</h2>
 <p>Para mais informações, entre em contato com o desenvolvedor:</p>
 <ul>
