@@ -73,7 +73,7 @@
 <ul>
     <li>Nome: Paulo Vitor</li>
     <li>
-        E-mail: pvitor.asilva@gmail.com<a href="mailto:pvitor.asilva@gmail.com" style="text-decoration:none;"><img
+        E-mail: pvitor.asilva@gmail.com <a href="mailto:pvitor.asilva@gmail.com" style="text-decoration:none;"><img
                 src="./assets/gmail.webp" alt="gmail-logo"
                 style="height: 15px; width: 15; position: absolute; margin: 2px 0 0 6px; "></a>
     </li>
