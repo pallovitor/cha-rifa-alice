@@ -108,9 +108,17 @@ function esconde() {
         const number = document.getElementById("selectedNumbers");
         const forma = document.getElementById("forma")
         let numqt = document.getElementById("qt-num")
+        let vaLor = document.getElementById("vaLor")
         number.value = selectedNumbers
         pix.checked ? forma.value = "PIX" : forma.value = "FRALDA"
         numqt.value = selectedNumbers.length
+        if (forma.value === "PIX") {
+            vaLor.value = totalValue
+        } else {
+            vaLor.value = ""
+
+        }
+        console.log(vaLor.value)
 
 
         const messageTextArea = document.getElementById("dados");
