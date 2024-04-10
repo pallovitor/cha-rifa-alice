@@ -9,68 +9,55 @@
 </head>
 
 <body>
-  <div>
-  <div  class="spinning-circles">
-    <label class="container-checkboxes "><input
-        type="radio"
-        name="toggle"
-        value="pix"
-        class="pix-check"
-        id="pix-check"
-        
-      />
+  <div class="spinning-circles">
+    <label class="container-checkboxes "><input type="radio" name="toggle" value="pix" class="pix-or-fralda"
+        id="pix-check" />
       <span class="checkmark"></span>
     </label>
     <label class="container-checkboxes ">
-      <input
-        type="radio"
-        value="fralda"
-        name="toggle"
-        class="fraldas-check"
-        id="fraldas-check"
-        
-        
-      />
+      <input type="radio" value="fralda" name="toggle" class="pix-or-fralda" id="fraldas-check" />
       <span class="checkmark"></span>
     </label>
-    </div>
-  
+  </div>
+
   <div class="mascara-formulario" onclick="cliqueimascara()"></div>
   <form id="ticket-form" class="ticket-form-send"
-  action="https://script.google.com/macros/s/AKfycbxG9oWvfJn7MsaxRMMVipqOPpvZukZMVriku8I0spKQeZGA-JEmCvw9_xwuCO1awpgWxQ/exec?gid=490905143"
+    action="https://script.google.com/macros/s/AKfycbxG9oWvfJn7MsaxRMMVipqOPpvZukZMVriku8I0spKQeZGA-JEmCvw9_xwuCO1awpgWxQ/exec?gid=490905143"
     method="post">
     <legend class="legend">Preencha seus dados</legend>
-    <label for="name" >Nome:</label>
+    <label for="name">Nome:</label>
     <input type="text" id="name" name="Nome:" required placeholder="Digite seu nome aqui!"></input>
     <label for="tel">whatsapp:</label>
     <input type="tel" id="tel" name="numer" required placeholder="(xx) xxxx-xxxx"></input>
-    <input type="text" name="Numero:" hidden id="selectedNumbers"/>
+    <input type="text" name="Numero:" hidden id="selectedNumbers" />
     <input type="text" name="Forma:" hidden id="forma" value="">
     <textarea name="dados" id="dados" cols="30" rows="10" class="number-selects">
-      
+
     </textarea>
     <button id="submit-btn" class="send">Enviar</button>
   </form>
 
   </div>
-  
-  
+
+
   <div class="container-background">
     <div class="container">
       <div class="number">
-      <div id="number-container" className="number-container" class="number-container"></div>
+        <div id="number-container" className="number-container" class="number-container"></div>
+      </div>
     </div>
-    </div>
-    <img src="./assets/Alice.png" alt="Imagem de Alice" />
+    <picture>
+      <source media="(max-width: 768px)" srcset="./assets/Alice.png" />
+      <source media="(min-width: 959px)" srcset="./assets/Alice-PC.gif">
+      <img src="./assets/Alice.png" alt="Imagem de Alice" />
+    </picture>
     <p id="valor">R$</p>
-  <button data-js="showForm" class="big-button">Enviar</button>
+    <button data-js="showForm" class="big-button">Enviar</button>
     <!-- <video src="./assets/Alice.mp4" autoplay muted loop></video> -->
     <p class="fraldas">?</p>
-    
+
   </div>
-  
-  
-</div>
+
 
 </body>
 <script type="module" src="./app.js"></script>

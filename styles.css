@@ -22,29 +22,20 @@
   font-weight: normal;
   font-style: normal;
 }
-.tudo {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
 
 div.container-background,
 img {
   position: absolute;
   width: 100vw;
   height: 100vh;
-
-  /* @media screen and (max-height: 670px) {
-    height: 900px;
-  } */
 }
+
 div.number {
-  /* z-index: 11; */
   height: 36vh;
   margin-top: 30vh;
   margin-bottom: 34vh;
   justify-content: center;
-  /* top: 273px; */
+  text-align: center;
 }
 
 .container {
@@ -177,9 +168,6 @@ p {
     outline-color: #ffffff;
   }
 
-  /* @media screen and (max-height: 640px) {
-        margin: 0 5px 11px 0;
-      } */
   &::before {
     content: "";
     position: absolute;
@@ -249,6 +237,13 @@ h2 {
 
 legend {
   text-align: center;
+}
+.pix-or-fralda {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: #18d80f;
 }
 
 input {
@@ -361,12 +356,11 @@ textarea {
     width: auto;
   }
   div.number {
-    /* z-index: 11; */
     height: 36vh;
     margin-top: 29.3vh;
     margin-bottom: 34vh;
     justify-content: center;
-    /* top: 273px; */
+    text-align: center;
   }
 
   .spinning-circles {
@@ -394,5 +388,243 @@ textarea {
     top: 85.3vh;
     left: 87vw;
     font-size: 30px;
+  }
+}
+@media screen and (min-width: 960px) {
+  div.number {
+    width: 35vw;
+    height: 49vh;
+    margin: 15vh 0 0 33vw;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .number-box {
+    font-family: gagalin;
+    position: relative;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    text-decoration-line: revert;
+    font-size: 30px;
+  }
+  .fraldas {
+    top: 71vh;
+    left: 93vw;
+    font-size: 70px;
+  }
+
+  p {
+    position: absolute;
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    top: 74vh;
+    left: 86vw;
+  }
+
+  .spinning-circles {
+    position: absolute;
+    display: flex;
+    width: 101px;
+    height: 57px;
+    top: 66.6vh;
+    left: 85vw;
+    gap: 5vh;
+    z-index: 2;
+  }
+
+  .pix-or-fralda {
+    height: 40px;
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+  }
+
+  button.big-button {
+    display: block;
+    top: 80vh;
+    left: 77vw;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    font-size: 46px;
+    color: var(--colorShadeA);
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 110px;
+    width: 175px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  button.big-button {
+    border: 2px solid var(--colorShadeA);
+    border-radius: 1em;
+    background: var(--colorShadeE);
+    transform-style: preserve-3d;
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  button.big-button::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--colorShadeC);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+
+  button.big-button:hover {
+    background: var(--colorShadeD);
+    transform: translate(0, 0.375em);
+  }
+
+  button.big-button:hover::before {
+    transform: translate3d(0, 0.75em, -1em);
+  }
+
+  button.big-button:active {
+    transform: translate(0em, 0.75em);
+  }
+
+  button.big-button:active::before {
+    transform: translate3d(0, 0, -1em);
+
+    box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+  }
+}
+
+@media screen and (min-width: 1015px) {
+  .number-box {
+    font-family: gagalin;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration-line: revert;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .number-box {
+    font-family: gagalin;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration-line: revert;
+    font-size: x-large;
+  }
+
+  .number-container {
+    margin: 19px;
+    height: auto;
+    width: auto;
+  }
+
+  .pix-or-fralda {
+    /* height: 40px; */
+    width: 24px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+  }
+
+  .spinning-circles {
+    position: absolute;
+    display: flex;
+    width: 101px;
+    height: 57px;
+    top: 65.6vh;
+    left: 87vw;
+    gap: 5vh;
+    z-index: 2;
+  }
+}
+
+@media screen and (min-width: 1183px) {
+  .number-box {
+    font-family: gagalin;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration-line: revert;
+    font-size: 20px;
+  }
+
+  div.number {
+    width: 39vw;
+    height: auto;
+    margin: 15vh 0 0 31.5vw;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1847px) {
+  .number-box {
+    font-family: gagalin;
+    position: relative;
+    width: 63px;
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+    text-decoration-line: revert;
+    font-size: xxx-large;
+  }
+  .number-container {
+    margin: 13px;
+    height: auto;
+    width: auto;
+  }
+
+  .spinning-circles {
+    position: absolute;
+    display: flex;
+    width: 101px;
+    height: 57px;
+    top: 66.6vh;
+    left: 86vw;
+    gap: 13vh;
+    z-index: 2;
+  }
+
+  .fraldas {
+    top: 71vh;
+    left: 94vw;
+    font-size: 82px;
+  }
+
+  p {
+    position: absolute;
+    z-index: 1;
+    font-size: 38px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    top: 74vh;
+    left: 86vw;
   }
 }
