@@ -190,7 +190,7 @@ function esconde() {
         event.preventDefault();
     });
     async function handleSubmit() {
-        esconde()
+
 
         const backuNberss = doc(db, "rifa", "2PDOY71RmsyixT4Cfu6i");
 
@@ -224,6 +224,7 @@ function esconde() {
     }
 
     document.getElementById('ticket-form').addEventListener('submit', function (event) {
+        esconde()
 
         event.preventDefault();
         var formData = new FormData(this);
