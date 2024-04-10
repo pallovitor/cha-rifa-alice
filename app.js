@@ -44,6 +44,8 @@ function esconde() {
     mascara.style.visibility = "visible"
 }
 
+
+
 (async () => {
     function generateNumberBoxes() {
         for (let i = 1; i <= 80; i++) {
@@ -105,9 +107,13 @@ function esconde() {
     function showForm() {
         const number = document.getElementById("selectedNumbers");
         const forma = document.getElementById("forma")
+        let numqt = document.getElementById("qt-num")
+        let vaLor = document.getElementById("vaLor")
         number.value = selectedNumbers
         pix.checked ? forma.value = "PIX" : forma.value = "FRALDA"
-        console.log(forma.value)
+        numqt.value = selectedNumbers.length
+        vaLor.value = totalValue
+        console.log(vaLor.value)
 
         const messageTextArea = document.getElementById("dados");
         if (selectedNumbers.length === 0) {
@@ -140,7 +146,11 @@ function esconde() {
 
         }
 
+
+
+
     }
+
 
 
     function cliqueimascara() {
@@ -158,7 +168,7 @@ function esconde() {
             alert("Por favor, preencha todos os campos do formulário.");
             return;
         }
-        handleSubmit()
+
         // Process the form data here
         console.log("Name: " + nameInput.value);
         console.log("Tel: " + emailInput.value);
@@ -219,12 +229,14 @@ function esconde() {
             .then(data => {
 
                 console.log(data);
+                handleSubmit()
             })
             .catch(error => {
 
                 console.error(error);
             });
     });
+
     document.querySelector('.big-button').addEventListener('click', showForm);
     document.querySelector('.mascara-formulario').addEventListener('click', cliqueimascara);
     generateNumberBoxes();

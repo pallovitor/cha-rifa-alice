@@ -26,11 +26,15 @@
     method="post">
     <legend class="legend">Preencha seus dados</legend>
     <label for="name">Nome:</label>
-    <input type="text" id="name" name="Nome:" required placeholder="Digite seu nome aqui!"></input>
+    <input type="text" id="name" name="Nome:" required placeholder="Digite seu nome aqui!"
+      autocomplete="additional-name">
     <label for="tel">whatsapp:</label>
-    <input type="tel" id="tel" name="numer" required placeholder="(xx) xxxx-xxxx"></input>
+    <input type="tel" id="tel" name="tel" required placeholder="(xx) xxxx-xxxx" autocomplete="tel" maxlength="15"
+      onkeyup="handlePhone(event)" />
     <input type="text" name="Numero:" hidden id="selectedNumbers" />
     <input type="text" name="Forma:" hidden id="forma" value="">
+    <input type="number" name="QT.Num:" hidden id="qt-num" />
+    <input type="number" name="Valor:" hidden id="vaLor" />
     <textarea name="dados" id="dados" cols="30" rows="10" class="number-selects">
 
     </textarea>
@@ -60,6 +64,21 @@
 
 
 </body>
+<script>
+  const handlePhone = (event) => {
+    let input = event.target
+    input.value = phoneMask(input.value)
+  }
+
+  const phoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g, '')
+    value = value.replace(/(\d{2})(\d)/, "($1) $2")
+    value = value.replace(/(\d)(\d{4})$/, "$1-$2")
+    return value
+  }
+</script>
 <script type="module" src="./app.js"></script>
+
 
 </html>
