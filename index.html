@@ -15,6 +15,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chá rifa da Alice</title>
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .body {
+      visibility: hidden;
+      min-height: 100vh;
+      min-width: 100vw;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .spinner-box {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .circle-border {
+      width: 300px;
+      height: 300px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: linear-gradient(0deg, rgb(0 0 0 / 0%) 33%, rgb(0, 106, 255) 100%);
+      animation: spin 0.8s linear infinite;
+    }
+
+    .circle-core {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      border-radius: 50%;
+    }
+
+    .loading {
+      position: absolute;
+      font-size: 35px;
+      color: #FFFFFF;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+
+
+
+    .loader-tres-pontinhos {
+
+      outline: 1px solid transparent;
+      font-size: 0px;
+      padding: 0px;
+      display: inline-block;
+      position: absolute;
+      margin-left: 222px;
+      margin-top: 22px;
+    }
+
+    .loader-tres-pontinhos span {
+      background: #FFFFFF;
+      border-radius: 100%;
+      vertical-align: middle;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin: 2px 2px;
+      -webkit-animation: loader-tres-pontinhos 0.8s linear infinite alternate;
+      animation: loader-tres-pontinhos 0.8s linear infinite alternate;
+    }
+
+    .loader-tres-pontinhos span:nth-child(1) {
+      -webkit-animation-delay: -0.8;
+      animation-delay: -0.8s;
+    }
+
+    .loader-tres-pontinhos span:nth-child(2) {
+      -webkit-animation-delay: -0.53333s;
+      animation-delay: -0.53333s;
+    }
+
+    .loader-tres-pontinhos span:nth-child(3) {
+      -webkit-animation-delay: -0.26666s;
+      animation-delay: -0.26666s;
+    }
+
+    @keyframes loader-tres-pontinhos {
+      from {
+        transform: scale(0, 0);
+      }
+
+      to {
+        transform: scale(1, 1);
+      }
+    }
+
+    @-webkit-keyframes loader-tres-pontinhos {
+      from {
+        -webkit-transform: scale(0, 0);
+      }
+
+      to {
+        -webkit-transform: scale(1, 1);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -29,7 +154,24 @@
     </label>
   </div>
 
-  <div class="mascara-formulario" onclick="cliqueimascara()"></div>
+  <div class="mascara-formulario" onclick="cliqueimascara()">
+    <div class="body">
+      <div class="spinner-box ">
+        <div class="circle-border ">
+          <div class="circle-core "></div>
+        </div>
+        <p class="loading">Carregando
+        <div class="loader-tres-pontinhos">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </div>
+        </p>
+      </div>
+    </div>
+  </div>
   <form id="ticket-form" class="ticket-form-send"
     action="https://script.google.com/macros/s/AKfycbxG9oWvfJn7MsaxRMMVipqOPpvZukZMVriku8I0spKQeZGA-JEmCvw9_xwuCO1awpgWxQ/exec?gid=490905143"
     method="post">
@@ -64,7 +206,7 @@
       <source media="(min-width: 959px)" srcset="./assets/Alice-PC.gif">
       <img src="./assets/Alice.png" alt="Imagem de Alice" />
     </picture>
-    <p id="valor">R$</p>
+    <p id="valor" class="pf">R$</p>
     <button data-js="showForm" class="big-button">Enviar</button>
     <!-- <video src="./assets/Alice.mp4" autoplay muted loop></video> -->
     <p class="fraldas">?</p>

@@ -28,6 +28,7 @@ const submitBtn = document.getElementById("submit-btn");
 const form = document.querySelector(".ticket-form-send")
 const valor = document.getElementById("valor");
 const mascara = document.querySelector(".mascara-formulario")
+const load = document.querySelector(".body")
 const tFralda = document.querySelector(".fraldas");
 let fraldas = document.querySelector('#fraldas-check')
 let pix = document.querySelector('#pix-check')
@@ -41,7 +42,12 @@ var numberSelector
 
 function esconde() {
     mascara.style = "z-index: 3"
+    load.style.visibility = "visible"
     mascara.style.visibility = "visible"
+
+
+
+
 }
 
 

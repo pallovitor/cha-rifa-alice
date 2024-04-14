@@ -111,7 +111,7 @@ button.big-button:active::before {
   box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
 }
 
-p {
+.pf {
   position: absolute;
   z-index: 1;
   font-size: 20px;
@@ -123,6 +123,12 @@ p {
   left: 70.6vw;
 }
 .fraldas {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  display: block;
+  width: fit-content;
+  height: fit-content;
   font-size: 37px;
   top: 86.3vh;
   left: 86vw;
@@ -287,6 +293,9 @@ textarea {
   top: 0;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     109deg,
     rgba(10, 12, 16, 0.99) 15%,
@@ -296,6 +305,7 @@ textarea {
   transition: visibility 1s ease-in-out;
   z-index: 2;
 }
+
 .spinning-circles {
   position: absolute;
   display: flex;
@@ -373,7 +383,7 @@ textarea {
     gap: 53px;
     z-index: 2;
   }
-  p {
+  .pf {
     position: absolute;
     z-index: 1;
     font-size: 20px;
@@ -415,7 +425,7 @@ textarea {
     font-size: 70px;
   }
 
-  p {
+  .pf {
     position: absolute;
     z-index: 1;
     font-size: 30px;
@@ -616,7 +626,7 @@ textarea {
     font-size: 82px;
   }
 
-  p {
+  .pf {
     position: absolute;
     z-index: 1;
     font-size: 38px;
